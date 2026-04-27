@@ -4,20 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://df7x4xli8e8yy" path="res://Assets/Sprites/removebg-robot.png" id="2_kyqiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyqiw"]
-size = Vector2(31, 27)
+size = Vector2(182, 151)
 
-[node name="Player" type="CharacterBody2D" unique_id=1680494597]
+[node name="Player" type="CharacterBody2D" unique_id=2058393635]
 script = ExtResource("1_script")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=631690382]
-position = Vector2(0, 5.684342e-14)
-scale = Vector2(0.038989715, 0.03848217)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1925047507]
+position = Vector2(1, -1.0000038)
+scale = Vector2(0.23417969, 0.21855469)
 texture = ExtResource("2_kyqiw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1273611140]
-position = Vector2(0, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001413794]
+position = Vector2(2, 4.5)
 shape = SubResource("RectangleShape2D_kyqiw")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=699057376]
-position = Vector2(0, -50)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=275532370]
+position = Vector2(0, -150)
 position_smoothing_enabled = true

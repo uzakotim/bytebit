@@ -3,23 +3,22 @@
 [ext_resource type="PackedScene" uid="uid://d17rr4dpl0tp0" path="res://Scenes/Player.tscn" id="1_player"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
-size = Vector2(1152, 50)
+size = Vector2(4000, 200)
 
-[node name="World" type="Node2D" unique_id=2091293228]
-position = Vector2(0, 1)
+[node name="World" type="Node2D" unique_id=102329782]
 
-[node name="Player" parent="." unique_id=1628358732 instance=ExtResource("1_player")]
-position = Vector2(576, 300)
+[node name="Player" parent="." unique_id=44091956 instance=ExtResource("1_player")]
+position = Vector2(1512, 1000)
 
-[node name="Floor" type="StaticBody2D" parent="." unique_id=1943961145]
-position = Vector2(577, 600)
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1639390152]
+position = Vector2(1512, 1864)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=394946290]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=808487070]
 shape = SubResource("RectangleShape2D_floor")
 
-[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=1856715792]
-offset_left = -578.0
-offset_top = -25.0
-offset_right = 574.0
-offset_bottom = 25.0
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=255960474]
+offset_left = -2000.0
+offset_top = -100.0
+offset_right = 2000.0
+offset_bottom = 100.0
 color = Color(0.223529, 0.223529, 0.223529, 1)
