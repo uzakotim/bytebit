@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d17rr4dpl0tp0"]
+[gd_scene load_steps=4 format=3 uid="uid://d17rr4dpl0tp0"]
 
 [ext_resource type="Script" uid="uid://bb603cvapgxs" path="res://Scripts/Player.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dplmq8efhadvn" path="res://Assets/Sprites/robot.png" id="2_sprite"]
@@ -7,12 +7,20 @@
 radius = 20.0
 height = 40.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1048222847]
+[node name="Player" type="CharacterBody2D"]
+unique_id_reader = 1048222847
 script = ExtResource("1_script")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1092507998]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_id_reader = 1092507998
 scale = Vector2(0.026638815, 0.02523624)
 texture = ExtResource("2_sprite")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1572797124]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_id_reader = 1572797124
 shape = SubResource("CapsuleShape2D_capsule")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -50)
+position_smoothing_enabled = true
+position_smoothing_speed = 5.0
