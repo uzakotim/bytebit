@@ -1,12 +1,15 @@
-[gd_scene format=3 uid="uid://d17rr4dpl0tp0"]
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/Sprites/robot.png" id="1_sprite"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_capsule"]
 radius = 20.0
 height = 40.0
 
-[node name="Player" type="CharacterBody2D" unique_id=326297395]
+[node name="Player" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1425025902]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sprite")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1274640156]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_capsule")

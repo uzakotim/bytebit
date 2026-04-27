@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpmdootf4o5vo"
-valid=false
+uid="uid://dplmq8efhadvn"
+path="res://.godot/imported/robot.png-8c8449a2915772750b8c71c8c82cea03.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Assets/Sprites/robot.png"
+dest_files=["res://.godot/imported/robot.png-8c8449a2915772750b8c71c8c82cea03.ctex"]
 
 [params]
 
