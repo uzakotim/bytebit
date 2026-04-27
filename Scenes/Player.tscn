@@ -1,23 +1,54 @@
 [gd_scene format=3 uid="uid://d17rr4dpl0tp0"]
 
 [ext_resource type="Script" uid="uid://bb603cvapgxs" path="res://Scripts/Player.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://df7x4xli8e8yy" path="res://Assets/Sprites/removebg-robot.png" id="2_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://c8y1taffny16w" path="res://Assets/Sprites/robot_move_1.png" id="2_frame1"]
+[ext_resource type="Texture2D" uid="uid://7ekqxbn86tt4" path="res://Assets/Sprites/robot_move_2.png" id="3_frame2"]
+[ext_resource type="Texture2D" uid="uid://bnl1qsti441nl" path="res://Assets/Sprites/robot_move_3.png" id="4_frame3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_robot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_frame1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_frame1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_frame1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_frame2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_frame3")
+}],
+"loop": true,
+"name": &"move",
+"speed": 12.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyqiw"]
 size = Vector2(182, 151)
 
-[node name="Player" type="CharacterBody2D" unique_id=2058393635]
+[node name="Player" type="CharacterBody2D" unique_id=1308245030]
 script = ExtResource("1_script")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1925047507]
-position = Vector2(1, -1.0000038)
-scale = Vector2(0.23417969, 0.21855469)
-texture = ExtResource("2_kyqiw")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=612987679]
+scale = Vector2(0.234, 0.219)
+sprite_frames = SubResource("SpriteFrames_robot")
+animation = &"move"
+autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001413794]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=177519605]
 position = Vector2(2, 4.5)
 shape = SubResource("RectangleShape2D_kyqiw")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=275532370]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1094642700]
 position = Vector2(0, -150)
 position_smoothing_enabled = true

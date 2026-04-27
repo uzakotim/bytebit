@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var sprite = $AnimatedSprite2D
+
 @export_group("Movement")
 @export var speed = 800.0
 @export var acceleration = 2000.0
@@ -42,7 +44,11 @@ func _physics_process(delta):
 	
 	if direction != 0:
 		velocity.x = move_toward(velocity.x, direction * speed, acceleration * delta)
+		sprite.play("move")
+		sprite.flip_h = direction < 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, friction * delta)
+		if abs(velocity.x) < 1.0:
+			sprite.play("idle")
 
 	move_and_slide()
