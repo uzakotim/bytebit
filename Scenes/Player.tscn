@@ -1,26 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://d17rr4dpl0tp0"]
+[gd_scene format=3 uid="uid://d17rr4dpl0tp0"]
 
 [ext_resource type="Script" uid="uid://bb603cvapgxs" path="res://Scripts/Player.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://dplmq8efhadvn" path="res://Assets/Sprites/robot.png" id="2_sprite"]
+[ext_resource type="Texture2D" uid="uid://df7x4xli8e8yy" path="res://Assets/Sprites/removebg-robot.png" id="2_kyqiw"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_capsule"]
-radius = 20.0
-height = 40.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyqiw"]
+size = Vector2(31, 27)
 
-[node name="Player" type="CharacterBody2D"]
-unique_id_reader = 1048222847
+[node name="Player" type="CharacterBody2D" unique_id=1680494597]
 script = ExtResource("1_script")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-unique_id_reader = 1092507998
-scale = Vector2(0.026638815, 0.02523624)
-texture = ExtResource("2_sprite")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=631690382]
+position = Vector2(0, 5.684342e-14)
+scale = Vector2(0.038989715, 0.03848217)
+texture = ExtResource("2_kyqiw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-unique_id_reader = 1572797124
-shape = SubResource("CapsuleShape2D_capsule")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1273611140]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_kyqiw")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=699057376]
 position = Vector2(0, -50)
 position_smoothing_enabled = true
-position_smoothing_speed = 5.0
